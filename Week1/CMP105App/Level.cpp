@@ -8,6 +8,10 @@ Level::Level(sf::RenderWindow* hwnd)
 	rect.setSize(sf::Vector2f(50, 5));
 	rect.setPosition(100, 100);
 	rect.setFillColor(sf::Color::Red);
+
+	rect1.setSize(sf::Vector2f(5, 5));
+	rect1.setPosition(100, 100);
+	rect1.setFillColor(sf::Color::Blue);
 }
 
 Level::~Level()
@@ -30,7 +34,8 @@ void Level::update()
 void Level::render()
 {
 	beginDraw();
-
+	window->draw(rect);
+	window->draw(rect1);
 	endDraw();
 }
 
