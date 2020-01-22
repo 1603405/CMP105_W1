@@ -17,6 +17,10 @@ Level::Level(sf::RenderWindow* hwnd)
 	rectBlue.setPosition(200, 200);
 	rectBlue.setFillColor(sf::Color::Blue);
 
+	rectGreen2.setSize(sf::Vector2f(50, 50));
+	rectGreen2.setPosition(2000, 2000);
+	rectGreen2.setFillColor(sf::Color::Green);
+
 	//message.setFont(font);
 	//message.setString("hello");
 	//message.setCharacterSize(24);
@@ -38,7 +42,8 @@ void Level::handleInput()
 // Update game objects
 void Level::update()
 {
-	
+	sf::Vector2u pos = window->getSize();
+	rectGreen2.setPosition((pos.x-50), (pos.y-50));
 }
 
 // Render level
@@ -49,6 +54,8 @@ void Level::render()
 	window->draw(rectGreen);
 	window->draw(rectBlue);
 	window->draw(message);
+	window->draw(rectGreen2);
+
 	endDraw();
 }
 

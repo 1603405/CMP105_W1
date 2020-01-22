@@ -21,6 +21,7 @@ private:
 
 	sf::RectangleShape rectRed;
 	sf::RectangleShape rectGreen;
+	sf::RectangleShape rectGreen2;
 	sf::RectangleShape rectBlue;
 	sf::CircleShape circle;
 	sf::Text message;
