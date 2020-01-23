@@ -21,11 +21,16 @@ Level::Level(sf::RenderWindow* hwnd)
 	rectGreen2.setPosition(2000, 2000);
 	rectGreen2.setFillColor(sf::Color::Green);
 
-	//message.setFont(font);
-	//message.setString("hello");
-	//message.setCharacterSize(24);
-	//message.setFillColor(sf::Color::Blue);
-	//message.setStyle(sf::Text::Bold | sf::Text::Underlined);
+	if (!font.loadFromFile("font/arial.ttf"))
+	{
+		std::cout << "error font";
+	}
+
+	message.setFont(font);
+	message.setString("hello");
+	message.setCharacterSize(24);
+	message.setFillColor(sf::Color::Blue);
+	message.setStyle(sf::Text::Bold | sf::Text::Underlined);
 
 }
 

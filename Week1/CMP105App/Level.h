@@ -25,4 +25,6 @@ private:
 	sf::RectangleShape rectBlue;
 	sf::CircleShape circle;
 	sf::Text message;
+	sf::Font font;
+
 };
