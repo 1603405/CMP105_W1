@@ -73,4 +73,5 @@ void Level::beginDraw()
 void Level::endDraw()
 {
 	window->display();
+
 }
